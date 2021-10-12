@@ -1,0 +1,16 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                /* Refer to browserslistrc */
+                "targets": "defaults",
+                "useBuiltIns": "usage",
+                "corejs": "3.6.5"
+            }
+        ]
+    ],
+    "plugins": [
+        
+    ]
+}

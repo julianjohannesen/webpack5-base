@@ -5,14 +5,26 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "sass": "node-sass -w sass -o styles/"
+        "build": "webpack",
+        "sass": "node-sass -w src/sass -o build/styles",
+        "babel": "npx babel src --out-dir build"
     },
     "author": "Julian Johannesen <julian.johannesen@gmail.com>",
     "license": "ISC",
-    "dev-dependencies": {
+    "dependencies": {
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.15.7",
+        "@babel/core": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
+        "css-loader": "^6.4.0",
         "eslint": "^8.0.0",
         "node-sass": "^6.0.1",
         "prettier": "^2.4.1",
-        "sass": "^1.42.1"
+        "sass": "^1.42.1",
+        "style-loader": "^3.3.0",
+        "webpack": "^5.58.1",
+        "webpack-cli": "^4.9.0"
     }
 }
