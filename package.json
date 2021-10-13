@@ -2,15 +2,24 @@
     "name": "css-tests",
     "version": "1.0.0",
     "description": "",
+    "author": "Julian Johannesen <julian.johannesen@gmail.com>",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": {
+        "url": ""
+    },
+    "homepage": "",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "webpack",
-        "sass": "node-sass -w src/sass -o build/styles",
+        "start": "webpack serve --open --config webpack.dev.js",
+        "build": "webpack --config webpack.prod.js",
+        "sass": "node-sass -w src/styles/sass -o src/styles",
         "babel": "npx babel src --out-dir build"
     },
-    "author": "Julian Johannesen <julian.johannesen@gmail.com>",
-    "license": "ISC",
     "dependencies": {
         "lodash": "^4.17.21"
     },
@@ -20,11 +29,15 @@
         "@babel/preset-env": "^7.15.8",
         "css-loader": "^6.4.0",
         "eslint": "^8.0.0",
+        "html-webpack-plugin": "^5.3.2",
+        "mini-css-extract-plugin": "^2.4.2",
         "node-sass": "^6.0.1",
         "prettier": "^2.4.1",
         "sass": "^1.42.1",
         "style-loader": "^3.3.0",
         "webpack": "^5.58.1",
-        "webpack-cli": "^4.9.0"
+        "webpack-cli": "^4.9.0",
+        "webpack-dev-server": "^4.3.1",
+        "webpack-merge": "^5.8.0"
     }
 }

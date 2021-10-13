@@ -1,3 +1,27 @@
-@import url('../styles/layout.module.css');
-@import url('../styles/header.module.css');
-@import url('../styles/footer.module.css');
+@import url("./styles/css/layout.module.css");
+@import url("./styles/css/header.module.css");
+@import url("./styles/css/footer.module.css");
+
+@font-face {
+	font-family: "Branda-yolq";
+	src: url("./assets/Branda-yolq.ttf");
+	font-weight: 600;
+	font-style: normal;
+}
+
+h1 {
+	color: white;
+	font: bold 30px Branda-yolq, sans-serif;
+	padding: 20px;
+}
+
+img {
+	height: 25%;
+	width: 25%;
+	padding: 20px;
+}
+
+button {
+	padding: 20px;
+	margin: 20px;
+}
