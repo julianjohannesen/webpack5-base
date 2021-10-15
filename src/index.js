@@ -5,7 +5,7 @@ import _ from "lodash";
 
 export default function Home() {
 	const element = document.createElement("h1");
-	element.innerHTML = "Hello webpack";
+	element.innerHTML = _.join(["Hello", "webpack"], " ");
 	return element;
 }
 

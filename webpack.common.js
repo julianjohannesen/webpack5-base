@@ -17,7 +17,7 @@ module.exports = {
 		// Don't forget that dynamically named
 		// bundles means that we can create a
 		// separate bundle for each entry point
-		filename: "[name].bundle.js",
+		filename: "[name].[contenthash].js",
 		path: path.resolve(__dirname, "build"),
         // Empty the build directory before 
         // every build
@@ -41,8 +41,8 @@ module.exports = {
         // Creates a new index.html in the build
         // directory. The index.html doesn't depend
         // on an index.html in src. It's created
-        // from the settings above every time we 
-        // build
+        // anew from the settings above every time
+        // we build
         new HtmlWebpackPlugin({
             title: 'Whatever',
         }),

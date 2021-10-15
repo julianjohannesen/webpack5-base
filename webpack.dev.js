@@ -2,6 +2,7 @@
 // webpack.dev
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = merge(common, {
     // "eval-source-map is the highest quality
@@ -13,16 +14,23 @@ module.exports = merge(common, {
 	mode: "development",
     module: {
         rules: [
+            // Note that webpack 5 suports hot
+            // module replacement by default.
         {
-            // In Webpack 5 we still need plugins
-            // to load our CSS.
-            test: /\.css$/i,
+            test: /\.s[ac]ss$/i,
             use: [
-                // We use style loader to add css
-                // to our head in <style> tags
+                // Style-loader in dev
                 "style-loader",
-                "css-loader"
+                "css-loader",
+                "postcss-loader",
+                "sass-loader"
             ],
         },
-    ]}
+    ]},
+    plugins: [
+        // Bundle Analyzer creates a visual
+        // representation of your module
+        // dependencies as chunks
+        new BundleAnalyzerPlugin()
+    ]
 });

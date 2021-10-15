@@ -1,5 +1,6 @@
 import _ from "lodash";
 
 export default function printMe() {
-	console.log("I get called from print.js!");
+    const message = _.join(["I get called", "from print.js"], " ");
+	console.log(message);
 }

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcss_tests=self.webpackChunkcss_tests||[]).push([[740],{569:function(n,s,t){t.d(s,{Z:function(){return o}});var c=t(486),e=t.n(c);function o(){const n=e().join(["I get called","from print.js"]," ");console.log(n)}}},function(n){n.O(0,[216,712],(function(){return 569,n(n.s=569)})),n.O()}]);
+//# sourceMappingURL=print.6dab0abe2eb422498ea7.js.map

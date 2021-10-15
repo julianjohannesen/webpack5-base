@@ -1,0 +1,49 @@
+body {
+	background-color: black;
+}
+
+.gi0NhMnTVJuRAlpmuVbq {
+	background-color: white;
+	width: 600px;
+	margin: 0 auto;
+	padding: 2em;
+}
+.gi0NhMnTVJuRAlpmuVbq main {
+	width: 550px;
+	padding: 2.5em;
+}
+
+header {
+	background-color: grey;
+}
+
+footer {
+	background-color: grey;
+}
+
+@font-face {
+	font-family: "Branda-yolq";
+	src: url(4810017209445a1fa312.ttf);
+	font-weight: 600;
+	font-style: normal;
+}
+
+h1 {
+	color: white;
+	font: bold 30px Branda-yolq, sans-serif;
+	padding: 20px;
+}
+
+img {
+	height: 25%;
+	width: 25%;
+	padding: 20px;
+}
+
+button {
+	padding: 20px;
+	margin: 20px;
+}
+
+
+/*# sourceMappingURL=index.css.map*/
