@@ -35,6 +35,42 @@ module.exports = {
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
 				type: "asset/resource",
 			},
+			// Webpack 5 supports hot module replacement by default.
+			{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: [
+							[
+								"@babel/preset-env",
+								{
+                                    // Refer to .browserslistrc for a list of targets
+									// targets: "defaults",
+									useBuiltIns: "usage",
+									corejs: "^3.18.3", // As of Oct. 2021
+								},
+							],
+						],
+						plugins: [
+							[
+								"@babel/plugin-transform-runtime",
+								{
+									absoluteRuntime: false, // Default
+									corejs: {version: 3, proposals: true}, // Changed to use CoreJS
+									helpers: true, // Default
+									// polyfill option removed in v7
+									regenerator: true, // Default
+									// useBuiltIns option removed in v7
+									// useESModules now deprecated
+									version: "^7.0.0-beta.0", // Default
+								},
+							],
+						],
+					},
+				},
+			},
 		],
 	},
     plugins: [
@@ -44,7 +80,7 @@ module.exports = {
         // anew from the settings above every time
         // we build
         new HtmlWebpackPlugin({
-            title: 'Whatever',
+            title: 'Webpack 5 Base',
         }),
     ],
 };

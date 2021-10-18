@@ -12,6 +12,11 @@
 
 # Browsers that we support
 
+[development]
+defaults
+> 1%
+not IE 11
+
 [production]
 # "defaults" is short for Browserslist’s default browsers 
 # (> 0.5%, last 2 versions, Firefox ESR, not dead)

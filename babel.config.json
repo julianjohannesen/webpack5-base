@@ -1,16 +1,5 @@
+// See webpack.common.js for babel-loader options
 {
-    "presets": [
-        [
-            "@babel/preset-env",
-            {
-                /* Refer to browserslistrc */
-                "targets": "defaults",
-                "useBuiltIns": "usage",
-                "corejs": "3.6.5"
-            }
-        ]
-    ],
-    "plugins": [
-        
-    ]
+    "presets": [],
+    "plugins": []
 }

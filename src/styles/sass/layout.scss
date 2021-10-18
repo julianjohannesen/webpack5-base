@@ -1,12 +1,24 @@
-@import url("./styles/css/layout.module.css");
-@import url("./styles/css/header.module.css");
-@import url("./styles/css/footer.module.css");
-
 @font-face {
 	font-family: "Branda-yolq";
-	src: url("./assets/Branda-yolq.ttf");
+	src: "./assets/Branda-yolq.ttf";
 	font-weight: 600;
 	font-style: normal;
+}
+
+body {
+	background-color: black;
+}
+
+.container {
+	background-color: white;
+	width: 600px;
+	margin: 0 auto;
+	padding: 2em;
+
+	main {
+		width: 550px;
+		padding: 2.5em;
+	}
 }
 
 h1 {

@@ -7,4 +7,6 @@
 7. Investigate PostCSS and its common plugins
 8. Investigate creating a webpack init template
 9. Set up workbox webpack plugin
+10. Read up on webpack config devserver options
+11. Find out what goes into webpack.dev and webpack.prod
 

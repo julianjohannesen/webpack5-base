@@ -1,9 +1,9 @@
 // We need to use merge to combine webpack.common and
 // webpack.dev
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common.js");
-
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common");
+
 
 module.exports = merge(common, {
 	devtool: "source-map",
@@ -12,14 +12,15 @@ module.exports = merge(common, {
 			{
 				// In Webpack 5 we still need plugins
 				// to load our CSS.
-				test: /\.css$/i,
+				test: /\.(css | sass | scss)$/i,
 				use: [
 					// Use MiniCssExtractPlugin
 					// to put css in separate files
 					// linked to in the head
 					MiniCssExtractPlugin.loader,
 					"css-loader",
-					"postcss-loader"
+					"postcss-loader",
+					"sass-loader"
 				],
 			},
 		],

@@ -1,0 +1,19 @@
+{
+    // Tell eslint to find this config file in this directory
+    "root": true,
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "allowImportExportEverywhere": true,
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    // Use the most recent environment
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2021": true
+    }
+}

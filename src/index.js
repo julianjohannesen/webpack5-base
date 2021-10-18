@@ -1,4 +1,4 @@
-import "./style.css";
+import "./styles/style.scss";
 import Icon from "./assets/momnkid.png";
 import printMe from "./print";
 import _ from "lodash";
