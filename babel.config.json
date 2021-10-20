@@ -1,5 +1,34 @@
 // See webpack.common.js for babel-loader options
 {
-    "presets": [],
-    "plugins": []
+    "presets": [
+        // [
+        //     "@babel/preset-env",
+        //     {
+        //         // Refer to .browserslistrc for a list of targets
+        //         "useBuiltIns": "usage",
+        //         "corejs": "^3.18.3"
+        //     }
+            
+        // ],
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic",
+                // This is dynamic in webpack.unified.js
+                "development": true
+            }
+        ]
+        
+    ],
+    "plugins": [
+        // Do we really still need this?
+        // "@babel/plugin-proposal-class-properties",
+        [
+            "@babel/plugin-transform-runtime",
+            { "corejs": { "version": 3, "proposals": true } }
+        ]
+    ],
+    "parserOpts": {
+        "plugins": ["jsx"]
+    }
 }

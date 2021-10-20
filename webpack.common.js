@@ -51,6 +51,8 @@ module.exports = {
 									useBuiltIns: "usage",
 									corejs: "^3.18.3", // As of Oct. 2021
 								},
+								"@babel/preset-react",
+								{}
 							],
 						],
 						plugins: [

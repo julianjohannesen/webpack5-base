@@ -76,22 +76,33 @@ const rules = [
 		type: "asset/resource",
 	},
 	{
-		test: /\.m?js$/,
+		test: /\.m?jsx?$/,
 		exclude: /node_modules/,
 		use: {
 			loader: "babel-loader",
 			options: {
 				presets: [
+					// [
+					// 	"@babel/preset-env",
+					// 	{
+					// 		// Refer to .browserslistrc for a list of targets
+					// 		useBuiltIns: "usage",
+					// 		corejs: "^3.18.3",
+					// 	}
+					// ],
 					[
-						"@babel/preset-env",
+						
+						"@babel/preset-react",
 						{
-							// Refer to .browserslistrc for a list of targets
-							useBuiltIns: "usage",
-							corejs: "^3.18.3",
-						},
+							runtime: "automatic",
+							development: dev,
+						}
 					],
+					
 				],
 				plugins: [
+					// Do we really still need this? Isn't it included in preset-env?
+					// "@babel/plugin-proposal-class-properties",
 					[
 						"@babel/plugin-transform-runtime",
 						{ corejs: { version: 3, proposals: true } },
@@ -105,6 +116,7 @@ const rules = [
 const plugins = [
 	new HtmlWebpackPlugin({
 		title: "Webpack 5 Base",
+		template: "./src/index.html"
 	}),
 	new MiniCssExtractPlugin(),
 	// new BundleAnalyzerPlugin(),

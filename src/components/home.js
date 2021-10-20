@@ -1,7 +1,10 @@
-export default function Home() {
-	const element = document.createElement("h1");
+import Layout from "./layout";
+import Hero from "./hero.js";
 
-	element.innerHTML = "Hello webpack";
-
-	return element;
+export default function Home(props) {
+	return (
+		<Layout>
+			<Hero />
+		</Layout>
+	);
 }

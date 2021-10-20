@@ -4,6 +4,7 @@
     "description": "A Webpack 5 base configuration.",
     "author": "Julian Johannesen <julian.johannesen@gmail.com>",
     "license": "ISC",
+    "private": true,
     "repository": {
         "type": "git",
         "url": "https://github.com/julianjohannesen/webpack5-base.git"
@@ -22,10 +23,13 @@
         "profile": "webpack --profile --json > stats.json"
     },
     "dependencies": {
+        "@babel/preset-react": "^7.14.5",
         "bulma": "^0.9.3",
         "html-webpack-plugin": "^5.4.0",
         "lodash": "^4.17.21",
         "mini-css-extract-plugin": "^2.4.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
         "webpack-merge": "^5.8.0"
     },
     "devDependencies": {

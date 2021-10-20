@@ -1,28 +1,17 @@
 import "./styles/style.scss";
-import Icon from "./assets/momnkid.png";
-import printMe from "./print";
-import _ from "lodash";
+import React from "react";
+import ReactDOM from "react-dom";
+import Home from "./components/home.js";
+//import reportWebVitals from "./reportWebVitals";
 
-export default function Home() {
-	const element = document.createElement("h1");
-	element.innerHTML = _.join(["Hello", "webpack"], " ");
-	return element;
-}
+ReactDOM.render(
+	<React.StrictMode>
+		<Home />
+	</React.StrictMode>,
+	document.getElementById("root")
+);
 
-function AddImage() {
-	// Add the image to our existing div.
-	const myIcon = new Image();
-	myIcon.src = Icon;
-	return myIcon;
-}
-
-function AddBttn() {
-	const bttn = document.createElement("button");
-	bttn.innerHTML = "Click me";
-	bttn.onclick = printMe;
-	return bttn;
-}
-
-document.body.appendChild(Home());
-document.body.appendChild(AddImage());
-document.body.appendChild(AddBttn());
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+//reportWebVitals();
